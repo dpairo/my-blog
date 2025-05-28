@@ -4,14 +4,6 @@
   box-sizing: border-box;
 }
 
-body {
-  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-  background: #1e1e2f;
-  color: #f1f1f1;
-  line-height: 1.6;
-  min-height: 100vh;
-}
-
 header {
   background-color: #111827;
   color: white;
@@ -55,6 +47,16 @@ section {
   box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
   padding: 25px;
 }
+
+body {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background: #1e1e2f; /* fondo oscuro */
+  color: #f1f1f1;
+  line-height: 1.6;
+  min-height: 100vh;
+}
+
+/* ...otros estilos que ya te pasé... */
 
 #about {
   display: flex;
