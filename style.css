@@ -1,0 +1,14 @@
+body {
+  font-family: sans-serif;
+  line-height: 1.6;
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 20px;
+  background-color: #fafafa;
+}
+
+header, footer {
+  text-align: center;
+  padding: 10px;
+  background-color: #eee;
+}
