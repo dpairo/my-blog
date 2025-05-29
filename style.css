@@ -59,16 +59,19 @@ body {
 #about {
   display: flex;
   align-items: center;
+  justify-content: start;
   gap: 20px;
+  flex-wrap: wrap;
 }
 
 .profile-pic {
-  width: 140px;    
+  width: 140px;
   height: 140px;
-  border-radius: 50%;    
-  object-fit: cover;     
+  border-radius: 50%;
+  object-fit: cover;
   border: 3px solid #60a5fa;
-  box-shadow: 0 4px 8px rgba(0,0,0,0.3);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+  flex-shrink: 0;
 }
 
 footer {
