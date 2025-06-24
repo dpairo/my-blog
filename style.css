@@ -1,21 +1,20 @@
 html, body {
-  height: 100%;
+  height: 100vh;
   margin: 0;
-  padding: 0;
 }
 
 body {
-  display: flex;
-  flex-direction: column;
   font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
   background-color: #121212;
   color: #e0e0e0;
+  display: flex;
+  flex-direction: column;
 }
 
 .container {
   display: flex;
   width: 100%;
-  flex: 1;
+  min-height: 100vh;
 }
 
 .sidebar {
@@ -80,8 +79,10 @@ body {
 
 .content {
   flex: 1;
-  padding: 60px;
+  padding: 30px 60px 60px;
   background-color: #181818;
+  overflow-y: auto;
+  padding-bottom: 60px;
 }
 
 .main-links a {
@@ -153,7 +154,7 @@ body {
 }
 
 .card a {
-  color: #60a5fa;
+  color: #1d497e;
   text-decoration: none;
   font-weight: 600;
 }
@@ -196,15 +197,42 @@ body {
   margin-bottom: 10px;
 }
 
-.intro p {
-  font-size: 1rem;
-  color: #aaa;
-  line-height: 1.7;
-  max-width: 1150px;
+.intro {
+  background-color: #252525;
+  padding: 40px;
+  border-left: 4px solid #27a10b; 
+  border-radius: 8px;
+  max-width: 1400px;
+  margin-left: 0;                 
+  margin-right: auto;
+  color: #ccc;
+  animation: fadeIn 1s ease-in-out;
 }
 
-.intro {
-  animation: fadeIn 1s ease-in-out;
+.intro h1 {
+  font-size: 2.2rem;
+  color: #ccc;
+  margin-top: 0px;
+  margin-bottom: 10px;
+}
+
+.intro h2 {
+  font-size: 2.2rem;
+  margin-top: -5px;
+  margin-bottom: 20px;
+  color: #e0e0e0;
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  transition: transform 0.3s ease;
+}
+
+.intro h2:hover {
+  transform: scale(1.05);
+}
+
+.intro h2 i {
+  color: #e0e0e0;
 }
 
 @keyframes fadeIn {
@@ -254,4 +282,149 @@ body {
     display: inline-block;
     margin: 10px 10px 0 0;
   }
+}
+
+
+.section-divider {
+  height: 2px;
+  background: #27a10b;
+  border: none;
+  margin: 40px 0;
+  position: relative;
+  overflow: hidden;
+}
+
+
+
+/* --- Link Card and Responsive Button Container --- */
+.link-card {
+  background-color: #222;
+  border-radius: 12px;
+  padding: 24px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  min-height: 160px;
+}
+
+.link-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.4);
+}
+
+.link-card h3 {
+  color: #e0e0e0;
+  margin: 0 0 12px;
+  font-size: 1.2rem;
+}
+
+.link-card a {
+  margin-top: auto;
+  padding: 10px 20px;
+  background-color: #2d2d2d;
+  color: #60a5fa;
+  font-weight: 600;
+  border: 1px solid #3b82f6;
+  border-radius: 8px;
+  text-decoration: none;
+  transition: all 0.3s ease;
+}
+
+.link-card a:hover {
+  background-color: #3b82f6;
+  color: #fff;
+}
+
+.button-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 20px;
+  margin-top: 20px;
+}
+
+.about-me h2 {
+  font-size: 1.8rem;
+  color: #e0e0e0;
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  transition: transform 0.3s ease;
+}
+
+.about-me h2:hover {
+  transform: scale(1.05);
+}
+
+.about-me h2 i {
+  color: #ffffff;
+}
+
+.intro p,
+.about-me p {
+  font-size: 1.05rem;
+  line-height: 1.8;
+  color: #d0d0d0;
+}
+
+.highlight {
+  color: #ccc;
+  font-weight: 600;
+  display: inline-block; 
+  transition: transform 0.3s ease;
+}
+
+.highlight:hover {
+  transform: scale(1.03);
+  color: #66f246;
+}
+
+.intro p, .about-me p {
+  opacity: 0;
+  transform: translateY(10px);
+  animation: fadeInText 0.6s ease forwards;
+  animation-delay: 0.2s;
+}
+
+@keyframes fadeInText {
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.intro p,
+.about-me p {
+  margin-bottom: 20px;
+}
+
+
+/* --- Textual Enhancements --- */
+.subsection {
+  font-size: 1.2rem;
+  color: #60a5fa;
+  margin-top: 30px;
+  margin-bottom: 10px;
+  font-weight: 600;
+}
+
+.simple-list {
+  padding-left: 20px;
+  margin-bottom: 20px;
+}
+
+.simple-list li {
+  margin-bottom: 6px;
+  color: #d0d0d0;
+  font-size: 1.05rem;
+  line-height: 1.6;
+}
+
+blockquote.quote {
+  font-style: italic;
+  color: #aaa;
+  border-left: 3px solid #3b82f6;
+  padding-left: 15px;
+  margin: 20px 0;
 }
